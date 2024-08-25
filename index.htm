@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Turn-Based Chess-Like Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Turn-Based Chess-Like Game</h1>
+
+  <!-- Player Setup -->
+  <div id="player-setup">
+    <h2>Select Characters</h2>
+    <div id="player-1-setup">
+      <h3>Player 1 Setup</h3>
+      <select id="player1-character-select">
+        <option value="P1">Pawn 1</option>
+        <option value="H1">Hero 1</option>
+        <option value="H2">Hero 2</option>
+      </select>
+      <button onclick="selectCharacter('A')">Select Character for Player 1</button>
+      <div id="player1-placement"></div>
+    </div>
+    <div id="player-2-setup">
+      <h3>Player 2 Setup</h3>
+      <select id="player2-character-select">
+        <option value="P1">Pawn 1</option>
+        <option value="H1">Hero 1</option>
+        <option value="H2">Hero 2</option>
+      </select>
+      <button onclick="selectCharacter('B')">Select Character for Player 2</button>
+      <div id="player2-placement"></div>
+    </div>
+  </div>
+
+  <!-- Chessboard -->
+  <div id="board"></div>
+
+  <!-- Game Controls -->
+  <div id="game-controls">
+    <h2>Game Controls</h2>
+    <div id="move-controls">
+      <h3>Select Move</h3>
+      <div id="move-options"></div>
+      <button id="move-button">Move</button>
+    </div>
+    <div id="status">
+      <h3>Game Status</h3>
+      <p id="turn-indicator">Player A's Turn</p>
+      <p id="player-turn">Current Player: A</p>
+      <p id="move-history">Move History:</p>
+    </div>
+  </div>
+
+  <script src="client.js"></script>
+</body>
+</html>

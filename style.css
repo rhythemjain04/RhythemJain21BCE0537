@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(5, 50px); /* Adjust size if needed */
+    grid-gap: 1px;
+    background-color: #ddd; /* Optional: to make gaps visible */
+}
+
+.cell {
+    width: 50px; /* Match the size in grid-template-columns */
+    height: 50px; /* Match the size in grid-template-columns */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.character {
+    padding: 10px;
+    background-color: #ddd;
+    border: 1px solid #bbb;
+    margin: 5px;
+    cursor: grab;
+}
+
+.character.dragging {
+    opacity: 0.5;
+}
+
+.move-option {
+    padding: 5px;
+    margin: 2px;
+    border: 1px solid #bbb;
+    cursor: pointer;
+}
+
+.move-option.selected {
+    background-color: #cfc;
+}
+
+#selected-character {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#turn-indicator {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#player-turn {
+    margin-top: 5px;
+    font-size: 16px;
+}
